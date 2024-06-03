@@ -32,7 +32,7 @@ if(isset($_POST['submit'])){
         $_SESSION['user_type'] = $userRow['user_type'];
 
         if($userRow['user_type'] == 3) {
-            header('location:admin.php');
+            header('location:AdministratorPage.php');
         } else if($userRow['user_type'] == 1 || $userRow['user_type'] == 2) {
             header('location:Dashboard.php');
         }
