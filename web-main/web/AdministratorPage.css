@@ -5,19 +5,37 @@ body {
     display: flex;
 }
 .sidebar {
-    width: 250px;
-    background-color: #333;
-    color: #fff;
+    width: 270px;
+    background-color: #4d434377;
+    color: #000000;
     height: 100vh;
     padding: 20px;
     box-sizing: border-box;
+    position: relative;
 }
 .sidebar h2 {
     text-align: center;
+    margin-bottom: 40px; /* Adjusting to make space for the user icon */
 }
+.sidebar .user-icon {
+    position: absolute;
+    top: 20px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+}
+
+.sidebar .user-icon .user-icon-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 .sidebar ul {
     list-style-type: none;
     padding: 0;
+    margin-top: 120px; /* Adjust this value to control the spacing below the user icon */
 }
 .sidebar ul li {
     padding: 15px 10px;
@@ -33,13 +51,84 @@ body {
     flex-grow: 1;
     padding: 20px;
     background-color: #f4f4f4;
+
+    background-image: url('images/background3.jpg'); /* Replace with the actual path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
 }
 .content h1 {
     margin-top: 0;
 }
 .card {
-    background-color: #fff;
+    background-color: #fde2e2;
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
+
+button.btn {
+    display:  inline-block; 
+    font-weight:  400; 
+    color:  #363636; 
+    vertical-align:  middle; 
+    user-select:  none; 
+    padding:  .25rem 1.5rem; 
+    font-size:  1.5rem; 
+    line-height:  1.5; 
+    border-radius:  4rem; 
+    margin-bottom: 1rem; 
+    box-shadow: 2px 1px 2px rgba(180,180,180,.7),inset 3px 2px 5px 
+  }
+
+  button.btn:hover { 
+    color:  #363636; 
+    text-decoration:  none; 
+    background-color: #f1f1f1; 
+    box-shadow: -2px -1px 2px rgba(180,180,180,.3),inset -3px -2px 3px rgba(255,255,255,.7);
+  } 
+
+.sidebar ul button.btn {
+    width: 100%; /* make the button full width */
+    padding: 10px; /* add some padding to make it look better */
+    margin: 10px 0; /* add some margin between buttons */
+    text-align: center; /* align the button text in the center */
+  }
+  
+  button.btn-logout {
+    display:  inline-block; 
+    font-weight:  400; 
+    color:  #ff0000; 
+    vertical-align:  middle; 
+    padding:  .25rem 1.5rem; 
+    font-size:  1.5rem; 
+    border-radius:  4rem; 
+    margin-bottom: 1rem; 
+    box-shadow: 2px 1px 2px rgba(180,180,180,.7),inset 3px 2px 5px 
+  }
+  button.btn-logout:hover { 
+    color:  #363636; 
+    text-decoration:  none; 
+    background-color: #f1f1f1; 
+    box-shadow: -2px -1px 2px rgba(180,180,180,.3),inset -3px -2px 3px rgba(255,255,255,.7);
+  }
+
+  .card1 {
+    background-color: #c7c7c7;
+    padding: 20px;
+    margin-bottom: 20px;
+   
+    border-radius: 10px;
+    border-radius:  4rem;
+}
+
+h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-size: 2 rem;
+    padding: 0.5rem 1rem;
+    
+  }

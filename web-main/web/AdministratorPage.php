@@ -6,20 +6,32 @@
     <title>AdministratorPage</title>
     <link rel="stylesheet" href="AdministratorPage.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
 </head>
 <body>
+    
+<body>
     <div class="sidebar">
-        <h2>Administrator</h2>
+        <div class="user-icon">
+            <img src="images/usericon1.jpg" alt="User Icon" class="user-icon-img">
+            <h2>ADMINISTRATOR</h2>
+        </div>
+
         <ul>
-            <li onclick="loadContent('orderHistory')">Order History</li>
-            <li onclick="loadContent('postHistory')">Post History</li>
-            <li onclick="loadContent('userManagement')">User Management</li>
-            <a href="Logout.php"><button class="btn">Logout</button></a>
+            <button class="btn" li onclick="loadContent('orderHistory')">Order History</li></button>
+            <button class="btn" li onclick="loadContent('postHistory')">Post History</li>
+            <button class="btn" li onclick="loadContent('userManagement')">User Management</li>
         </ul>
+        
+        <a href="Logout.php">
+            <button class="btn-logout">Logout</button>
+        </a>
     </div>
+
     <div class="content" id="content">
         <h1>Welcome to the Administrator Dashboard</h1>
-        <div class="card">
+
+        <div class="card1">
             <h2>Overview</h2>
             <p>This is a simple overview of the admin dashboard.</p>
         </div>
