@@ -64,12 +64,21 @@
                     }
                 });
             } else if (page === 'userManagement') {
-                content.innerHTML = `
-                    <h1>User Management</h1>
-                    <div class="card">
-                        <h2>User Details</h2>
-                        <p>Manage your users here.</p>
-                    </div>`;
+                $.ajax({
+                    url: 'fetchUserManagement.php',
+                    method: 'GET',
+                    success: function(data) {
+                        content.innerHTML = `
+                            <h1>User Management</h1>
+                            <div class="card">
+                                <h2>User Details</h2>
+                                ${data}
+                            </div>`;
+                    },
+                    error: function() {
+                        content.innerHTML = '<p>There was an error loading the user management data.</p>';
+                    }
+                });
             }
         }
     </script>
